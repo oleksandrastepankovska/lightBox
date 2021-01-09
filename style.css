@@ -27,10 +27,16 @@ body{
 
 .lightbox.active{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .lightboxImage{
     height: 400px;
+}
+
+.imageIndex{
+    font-size: 30px;
+    color: wheat;
 }
