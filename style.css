@@ -37,6 +37,24 @@ body{
 }
 
 .imageIndex{
+    display: flex;
     font-size: 30px;
     color: wheat;
+}
+
+.previousArrow{
+    content:url(https://img.icons8.com/ios/2x/ffffff/arrow.png);
+    transform: scaleX(-1);
+    width: 40px;
+    height: auto;
+    order: -1;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.nextArrow{
+    content:url(https://img.icons8.com/ios/2x/ffffff/arrow.png);
+    width: 40px;
+    margin-left: 5px;
+    cursor: pointer;
 }
