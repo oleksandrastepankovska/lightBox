@@ -12,12 +12,12 @@ previousArrow.className = "previousArrow";
 let index;
 
 images.forEach(image => {
-    image.addEventListener("click", () => {lightbox.classList.add('active')
+    image.addEventListener("click", () => {lightbox.classList.add('active');
         img.src = image.src;
         img.className = "lightboxImage";
-        index = image.getAttribute('img__id');
-        console.log(index);
-        imageIndex.innerHTML = "Image " + index + " of " + images.length;
+        index = image.getAttribute('data-index');
+        currentImageNumber = parseInt(index)+1;
+        imageIndex.innerHTML = "Image " + currentImageNumber + " of " + images.length;
         nextArrow.innerHTML = "next";
         previousArrow.innerHTML = "previous"
         lightbox.append(img, imageIndex);
