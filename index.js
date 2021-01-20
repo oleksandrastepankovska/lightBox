@@ -25,16 +25,21 @@ images.forEach(image => {
     })
 })
 
-const nextImage = () =>{
+const nextImage = () => {
     index++;
     if (index > 8) index = 0;
     img.src = images[index].src;
+    imageIndex.innerHTML = "Image " + Number(index+1) + " of " + images.length;
+    imageIndex.append(previousArrow, nextArrow);
 }
 
 const previousImage = () =>{
     index--;
     if (index < 0 ) index = 8;
     img.src = images[index].src;
+    console.log(images[index]);
+    imageIndex.innerHTML = "Image " + Number(index+1) + " of " + images.length;
+    imageIndex.append(previousArrow, nextArrow);
 }
 
 previousArrow.addEventListener('click', previousImage);
